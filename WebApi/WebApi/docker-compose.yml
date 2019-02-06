@@ -1,0 +1,13 @@
+version: "3"
+services:
+    web:
+        build: .
+        ports:
+            - "80:80"
+        depends_on:
+            - db
+    db:
+        image: "mcr.microsoft.com/mssql/server"
+        environment:
+            SA_PASSWORD: "Eulolanu32indajusi!"
+            ACCEPT_EULA: "Y"
